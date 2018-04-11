@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <h1>Hello User!</h1>
-    <Navbar></Navbar>
+    <HeaderBar />
+    <Navbar/>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-  import Navbar from './components/Navbar'
+  import Navbar from './components/Navbar/Navbar.vue'
+  import HeaderBar from './components/Header/HeaderBar.vue'
 export default {
   name: 'App',
-  components: {Navbar}
+  components: {Navbar, HeaderBar}
 }
 </script>
-
 <style lang="less">
   @import "./assets/reset.less";
 
@@ -24,8 +24,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: @LinkColorDefault;
-    margin-top: 6rem;
-    background-color: @BgColorDefault;
+    color: #FFFFFF;
+    margin-bottom: 4rem;
   }
 </style>

@@ -10,14 +10,26 @@
   url('iconfont.svg?t=1523025079097#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+.icon-font {
   font-family:"iconfont" !important;
   font-size:16px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-font-big{
+  vertical-align: middle;
+  font: normal normal normal 14px/1 "iconfont";
+  font-size: inherit;
+  text-rendering: auto;
+  display: inline-block;
+  &:before{
+     display: block;
+     font-size: 1.8rem;
+     margin-bottom: .2em;
+     margin-top: .2em;
+ }
+}
 .icon-app:before { content: "\e605"; }
 .icon-check:before { content: "\e60b"; }
 .icon-delete:before { content: "\e60f"; }

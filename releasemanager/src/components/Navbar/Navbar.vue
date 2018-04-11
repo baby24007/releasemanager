@@ -3,43 +3,35 @@
     <ul>
       <NavbarItem v-for="link in links"
                   :to="link"
+                  :key="link.label"
       ></NavbarItem>
-      <!--<li><router-link to="/release">发布</router-link></li>
-      <li><router-link to="/tools">工具</router-link></li>
-      <li><router-link to="/user">我的</router-link></li>-->
     </ul>
   </nav>
 </template>
 <script type="text/ecmascript-6">
-  import NavbarItem from './Navbar/NavbarItem.vue'
+  import NavbarItem from './NavbarItem.vue'
   export default {
     name: 'Navbar',
     components: {NavbarItem},
     data() {
+      let links = this.$router.options.routes.map((item) => {
+        return { url: item.path, label: item.meta.title, className: item.meta.icon}
+      })
       return {
-        links: [
-          { url: '/release', label: '部署', className: 'icon-home'},
-          { url: '/tools', label: '工具', className: 'icon-app'},
-          { url: '/user', label: '我的', className: 'icon-my'}
-        ]
-      }
-    },
-    methods: {
-      setActive() {
-        console.log('index')
-//        this.links[index].className += 'active';
+        links: links
       }
     }
   }
 </script>
 <style lang="less" scoped>
-  @import "../assets/variables.less";
+  @import "../../assets/variables.less";
   .navbar {
     background-color: #FFFFFF;
     position: relative;
     width: 100%;
-    color: @ColorPrimary;
+    color: @LineColorDark;
     border-top: 1px solid @LineColorDark;
+    z-index: 1;
     ul{
       display: flex;
       align-items: center;
