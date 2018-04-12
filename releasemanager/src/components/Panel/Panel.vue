@@ -10,12 +10,12 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-  import PanelItem from './PanelItem.vue'
-  export default {
-    name: "Panel",
-    props: ['label','items'],
-    components: {PanelItem}
-  }
+import PanelItem from './PanelItem.vue'
+export default {
+  name: 'Panel',
+  props: ['label', 'items'],
+  components: {PanelItem}
+}
 </script>
 <style lang="less" scoped>
   @import "../../assets/variables.less";

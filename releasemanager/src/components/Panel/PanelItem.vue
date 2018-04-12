@@ -8,10 +8,10 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-    export default {
-        name: "PanelItem",
-        props: ['name','link','icon']
-    }
+export default {
+  name: 'PanelItem',
+  props: ['name', 'link', 'icon']
+}
 </script>
 <style lang="less" scoped>
   @import '../../assets/font/iconfont.less';

@@ -3,16 +3,16 @@
     :to="to.url" :class="to.className" class="icon-font icon-font-big">{{to.label}}</router-link></li>
 </template>
 <script type="text/ecmascript-6">
-  export default {
-    props: {
-      to: {
-        url: String,
-        label: String,
-        className: String
-      }
-    },
-    name: 'NavbarItem'
-  }
+export default {
+  props: {
+    to: {
+      url: String,
+      label: String,
+      className: String
+    }
+  },
+  name: 'NavbarItem'
+}
 </script>
 <style lang="less" scoped>
   @import "../../assets/font/iconfont.less";

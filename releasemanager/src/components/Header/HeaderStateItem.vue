@@ -5,10 +5,10 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-    export default {
-        name: "HeaderStateItem",
-        props: ['state']
-    }
+export default {
+  name: 'HeaderStateItem',
+  props: ['state']
+}
 </script>
 <style lang="less" scoped>
   .header-state-item{

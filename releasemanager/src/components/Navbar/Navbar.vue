@@ -9,19 +9,23 @@
   </nav>
 </template>
 <script type="text/ecmascript-6">
-  import NavbarItem from './NavbarItem.vue'
-  export default {
-    name: 'Navbar',
-    components: {NavbarItem},
-    data() {
-      let links = this.$router.options.routes.map((item) => {
-        return { url: item.path, label: item.meta.title, className: item.meta.icon}
-      })
+import NavbarItem from './NavbarItem.vue'
+export default {
+  name: 'Navbar',
+  components: {NavbarItem},
+  data () {
+    let links = this.$router.options.routes.map((item) => {
       return {
-        links: links
+        url: item.path,
+        label: item.meta.title,
+        className: item.meta.icon
       }
+    })
+    return {
+      links: links
     }
   }
+}
 </script>
 <style lang="less" scoped>
   @import "../../assets/variables.less";

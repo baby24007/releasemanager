@@ -17,26 +17,26 @@ let router = new Router({
       path: '/',
       component: Home,
       meta: {
-        title: '首页',icon: 'icon-home'
+        title: '首页', icon: 'icon-home'
       },
       children: [
         // 当 /user/:id 匹配成功，
         // UserHome 会被渲染在 User 的 <router-view> 中
-        { path: '/home/list/:project', component: List, props: true}
+        {path: '/home/list/:project', component: List, props: true}
 
         // ...其他子路由
       ]},
-    {path: '/tools', component: Tools, meta: {title: '工具',icon: 'icon-app'}},
+    {path: '/tools', component: Tools, meta: {title: '工具', icon: 'icon-app'}},
     {
       path: '/user',
       component: User,
       meta: {
-        title: '我的',icon: 'icon-my'
+        title: '我的', icon: 'icon-my'
       },
       children: [
         // 当 /user/:id 匹配成功，
         // UserHome 会被渲染在 User 的 <router-view> 中
-        { path: '/user/login', component: Login}
+        {path: '/user/login', component: Login}
 
         // ...其他子路由
       ]

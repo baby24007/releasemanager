@@ -4,14 +4,7 @@
 <script type="text/ecmascript-6">
 export default {
   name: 'List',
-  props: ['project'],
-  watch: {
-    // 原来的组件实例会被复用,意味着组件的生命周期钩子不会再被调用
-    '$route'( to, from ) {
-    // 对路由变化作出响应...
-    console.log('对路由变化作出响应...')
-    }
-  }
+  props: ['project']
 }
 </script>
 <style></style>

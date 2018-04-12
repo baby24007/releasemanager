@@ -6,23 +6,23 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-  export default {
-    name: 'Login',
-    data() {
-      return {
-        isLogined:false,
-        account:'',
-        password:''
-      }
+export default {
+  name: 'Login',
+  data () {
+    return {
+      isLogined: false,
+      account: '',
+      password: ''
+    }
+  },
+  method: {
+    login () {
+      // 登录
     },
-    method: {
-      login() {
-        // 登录
-      },
-      logout() {
-        // 登出
-      }
+    logout () {
+      // 登出
     }
   }
+}
 </script>
 <style></style>
