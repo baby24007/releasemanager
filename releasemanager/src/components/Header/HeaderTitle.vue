@@ -1,18 +1,33 @@
-<template><h2>{{ title }}</h2></template>
+<template>
+  <div>
+    <h2><i class="icon-font icon-left" v-show="showGoback" @click="goback"></i>{{ title }}</h2>
+
+  </div>
+</template>
 <script type="text/ecmascript-6">
+
 export default {
   name: 'HeaderTitle',
+  props: {
+    back: {
+      type: Boolean,
+      default: true
+    }
+  },
   data () {
     return {
       title: document.title
     }
   },
   created () {
-    window.eventBus && window.eventBus.$on('updateTitle', () => this.updateTitle())
+    this.$root.$on('updateTitle', this.updateTitle)
   },
   methods: {
     updateTitle () {
       this.title = document.title
+    },
+    goback () {
+      window.history.go(-1)
     }
   }
 }
@@ -21,5 +36,13 @@ export default {
   h2{
     margin: 0 auto;
     padding: .6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    i{
+      float: left;
+      font-size: 1.5rem;
+      margin-right: -100%;
+    }
   }
 </style>

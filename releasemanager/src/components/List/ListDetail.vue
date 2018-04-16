@@ -1,9 +1,9 @@
 <template>
-  <div>你好，同学</div>
+  <div>{{$route.params.env}}</div>
 </template>
 <script type="text/ecmascript-6">
 export default {
-  name: 'HeaderUserInfo'
+  name: 'ListDetail'
 }
 </script>
 <style lang="less" scoped></style>

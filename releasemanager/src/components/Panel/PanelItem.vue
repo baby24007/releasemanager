@@ -4,17 +4,17 @@
         <i class="icon-font icon-font-big"
            :class="icon"></i>
         <router-link :to="link">{{name}}</router-link>
+        <p v-show="addition">{{addition}}</p>
     </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
 export default {
   name: 'PanelItem',
-  props: ['name', 'link', 'icon']
+  props: ['name', 'link', 'icon', 'addition']
 }
 </script>
 <style lang="less" scoped>
-  @import '../../assets/font/iconfont.less';
   @import "../../assets/variables.less";
   .panel-item{
     flex: 0 0 33.3%;

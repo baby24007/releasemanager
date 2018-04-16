@@ -15,7 +15,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../assets/font/iconfont.less";
   @import "../../assets/variables.less";
   .navbar-item{
     a{

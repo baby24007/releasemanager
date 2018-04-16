@@ -13,9 +13,10 @@ export default {
   data () {
     return {
       states: [
-        {label: '监控警告', count: 0},
-        {label: '待办工单', count: 4},
-        {label: '待续费', count: 3}
+        {label: '今日部署', count: 0},
+        {label: '全部部署', count: 4},
+        {label: '组件', count: 3},
+        {label: '中间件', count: 3}
       ]
     }
   }

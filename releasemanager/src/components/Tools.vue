@@ -1,9 +1,11 @@
 <template>
-  <div>这里有一些tools</div>
+  <main>
+    <div>There is tools page</div>
+  </main>
 </template>
-<script>
+<script type="text/ecmascript-6">
 export default {
   name: 'Tools'
 }
 </script>
-<style></style>
+<style lang="less" scoped></style>

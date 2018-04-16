@@ -1,18 +1,19 @@
 <template>
-  <div>你好，用户,输入帐号：
+  <div>
+    <div>There is User page</div>
     <BaseInputText
       v-model="account"
       placeholder="天哦"
       @keydown.enter="readAccount"
       @blur="validateAccount"
     ></BaseInputText>
+    <Loading />
   </div>
-
 </template>
 <script type="text/ecmascript-6">
 import BaseInputText from './BaseInputText'
 
-export default{
+export default {
   name: 'User',
   data () {
     return {
@@ -22,6 +23,7 @@ export default{
   components: {BaseInputText},
   created () {
     console.log('created')
+    console.log(this.$root)
   },
   mounted () {
     console.log('mounted')

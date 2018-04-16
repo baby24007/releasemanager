@@ -1,9 +1,11 @@
 <template>
-  <div class="panel">
-    <Panel v-for="panel in panels" :key="panel.name"
-          v-bind="panel"
-    />
-  </div>
+  <main>
+    <div class="panel">
+      <Panel v-for="panel in panels" :key="panel.name"
+             v-bind="panel"
+      />
+    </div>
+  </main>
 </template>
 <script type="text/ecmascript-6">
 import Panel from './Panel/Panel.vue'
@@ -15,10 +17,10 @@ export default {
         {
           label: '发布管理',
           items: [
-            {name: '集成环境', link: '/list', icon: 'icon-deliver'},
-            {name: '开发环境', link: '/list', icon: 'icon-deliver'},
-            {name: '预发布环境', link: '/list', icon: 'icon-deliver'},
-            {name: '生产环境', link: '/list', icon: 'icon-deliver'}
+            {name: '开发环境', link: '/list/dev', icon: 'icon-deliver', addition: '159个dev环境'},
+            {name: '集成环境', link: '/list/test', icon: 'icon-deliver'},
+            {name: '预发布环境', link: '/list/staging', icon: 'icon-deliver'},
+            {name: '生产环境', link: '/list/prod', icon: 'icon-deliver'}
           ]
         },
         {

@@ -1,7 +1,7 @@
 <template>
   <div class="header-state-item">
     <strong>{{state.count}}</strong>
-    <div>{{state.label}}</div>
+    <p>{{state.label}}</p>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -10,7 +10,7 @@ export default {
   props: ['state']
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   .header-state-item{
     flex: 1;
     strong{
