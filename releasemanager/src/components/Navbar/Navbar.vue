@@ -14,11 +14,14 @@ export default {
   name: 'Navbar',
   components: {NavbarItem},
   data () {
-    let links = this.$router.options.routes.map((item) => {
-      return {
-        url: item.path,
-        label: item.meta.title,
-        className: item.meta.icon
+    let links = []
+    this.$router.options.routes.forEach((item) => {
+      if (typeof item.meta !== 'undefined' && item.meta.title) {
+        links.push({
+          url: item.path,
+          label: item.meta.title,
+          className: item.meta.icon
+        })
       }
     })
     return {
