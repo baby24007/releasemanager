@@ -1,12 +1,12 @@
 <template>
-  <div class="panel-item">
+  <router-link :to="link" class="panel-item" tag="div">
     <div class="panel-item-wrapper">
         <i class="icon-font icon-font-big"
            :class="icon"></i>
-        <router-link :to="link">{{name}}</router-link>
+        <span>{{name}}</span>
         <p v-show="addition">{{addition}}</p>
     </div>
-  </div>
+  </router-link>
 </template>
 <script type="text/ecmascript-6">
 export default {
@@ -21,6 +21,7 @@ export default {
     position:relative;
     border-right:1px solid @BgColorDefault;
     border-bottom:1px solid @BgColorDefault;
+    cursor:default;
     .panel-item-wrapper{
       position: absolute;
       width: 100%;
@@ -34,7 +35,7 @@ export default {
     i{
       display: block;
     }
-    i,a{
+    i,span{
       color: @LinkColorDefault;
     }
     &:after {

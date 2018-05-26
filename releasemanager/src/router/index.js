@@ -4,12 +4,14 @@ import Home from '@/components/Home'
 import Tools from '@/components/Tools'
 import User from '@/components/User'
 import Navbar from '@/components/Navbar/Navbar'
-import HeaderTitle from '@/components/Header/HeaderTitle'
-import HeaderStateBar from '@/components/Header/HeaderStateBar'
-import HeaderUserInfo from '@/components/Header/HeaderUserInfo'
+// import HeaderStateBar from '@/components/Header/HeaderStateBar'
+// import HeaderUserInfo from '@/components/Header/HeaderUserInfo'
 import List from '@/components/List/List'
 import ListDetail from '@/components/List/ListDetail'
 import Login from '@/components/Login'
+// TODO为什么有个@
+// TODO 还不知道怎么用呢
+import NotFoundComponent from '@/components/NotFoundComponent'
 
 // 將VueRouter注入Vue
 Vue.use(Router)
@@ -17,19 +19,18 @@ Vue.use(Router)
 // 可以从其他文件 import 进来
 // let bus = window.eventBus = new Vue()
 let router = new Router({
+  // 路由的 history 模式, URL 就像正常的 ur
+  mode: 'history',
   routes: [
+    // 应该在 Vue 应用里面覆盖所有的路由情况，然后在给出一个 404 页面
+    { path: '*', component: NotFoundComponent },
     // 动态路径参数 以冒号开头
     {
       path: '/',
       name: 'home',
       components: {
         default: Home,
-        nav: Navbar,
-        title: HeaderTitle,
-        header: HeaderStateBar
-      },
-      props: {
-        currentView: 'HeaderStateBar'
+        nav: Navbar
       },
       meta: {
         title: '首页', icon: 'icon-home'
@@ -39,8 +40,7 @@ let router = new Router({
       path: '/tools',
       components: {
         default: Tools,
-        nav: Navbar,
-        title: HeaderTitle
+        nav: Navbar
       },
       name: 'tools',
       meta: {
@@ -52,9 +52,7 @@ let router = new Router({
       path: '/user',
       components: {
         default: User,
-        nav: Navbar,
-        title: HeaderTitle,
-        header: HeaderUserInfo
+        nav: Navbar
       },
       name: 'user',
       meta: {

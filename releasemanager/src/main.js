@@ -1,16 +1,20 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import store from './store'
 import router from './router'
 import App from './App'
 import Loading from './components/Loading'
+console.log(router)
+console.log(store)
+
 let rm = new Vue({
+  store,
   el: '#app',
   router,
-  template: '<App/>',
-  // 这里一定是components，之前写成component，一直就报错了
-  components: {App}
-})
+  render: h => h(App)
+}).$mount('#app')
+console.log(rm)
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title
