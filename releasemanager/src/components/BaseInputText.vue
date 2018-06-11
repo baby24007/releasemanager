@@ -34,4 +34,8 @@ export default {
   }
 }
 </script>
-<style></style>
+<style lang="less">
+.input{
+  width: 100%
+}
+</style>

@@ -14,9 +14,7 @@ import LeftArrow from '../Common/LeftArrow'
 export default {
   name: 'List',
   components: {HeaderBar, LeftArrow},
-  created () {
-    console.log(this.$store)
-  }
+  created () {}
 }
 </script>
 <style></style>

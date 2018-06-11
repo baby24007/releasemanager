@@ -5,8 +5,6 @@ import store from './store'
 import router from './router'
 import App from './App'
 import Loading from './components/Loading'
-console.log(router)
-console.log(store)
 
 let rm = new Vue({
   store,
@@ -14,7 +12,7 @@ let rm = new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
-console.log(rm)
+
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title

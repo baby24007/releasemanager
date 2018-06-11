@@ -10,9 +10,7 @@
 <script>
 export default {
   name: 'App',
-  created () {
-    console.log(this.$store)
-  }
+  created () {}
 }
 </script>
 <style lang="less">
